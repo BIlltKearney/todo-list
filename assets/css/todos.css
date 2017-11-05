@@ -1,0 +1,90 @@
+
+/*todos.css*/
+/*created by Kearney, Billt 2017 for web dev bootcamp*/
+/*order of styling is important to work*/
+body {
+	font-family: 'Averia Libre', cursive;
+	background: #000000;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #53346D, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #53346D, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+h1 {	
+	font-size: 24px;
+	font-weight: normal;
+	text-transform: uppercase;
+	background: #FFD700;
+	margin: 0;
+	color: #6A0BA1;
+	padding: 10px 20px
+}
+
+span { /*keep hidden until hover*/
+	background: #f22b15;
+	height: 40px;
+	margin-right: 20px;
+	text-align: center;
+	color: white;
+	width: 0px; /*keeps hidden and changes on hover*/
+	display: inline-block;
+	transition: 0.2s linear;
+	opacity: 0; /*keep icon hidden*/
+}
+
+input {
+	font-family: 'Averia Libre', cursive;
+	width: 100%;
+	color: #6A0BA1;
+	font-size: 18px;
+	background: #f7f7f7;
+	padding: 13px 13px 13px 20px;
+	box-sizing: border-box; /*add webkit info?*/
+	border: 3px solid rgba(0,0,0,0); /*removes misalignment between boxes*/
+}	
+
+input:focus{
+	background: white;
+	border: 3px solid #F5CE0C;
+	outline: none;
+}
+
+ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+li:hover span {
+	width: 40px;
+	opacity: 1.0; /*unhide icon */
+}
+
+li {
+	background: white;
+	height: 40px;
+	line-height: 40px;
+	color: #414142;
+}
+
+li:nth-child(2n){  /*selects pattern of every other li...2n, every third 3n...*/
+	background: #f7f7f7;
+}
+
+/*icon for new todo*/
+.fa-pencil-square-o {
+	float:right;
+	color: #6A0BA1;
+}
+
+#container {
+	width: 325px;
+	margin: 100px auto;
+	background: #f7f7f7;
+	box-shadow: 0 0 3px rgba(0,0,0,0.2);
+}
+
+.completed {
+	color: rgb(200, 200, 200);
+	text-decoration: line-through;
+}
+
